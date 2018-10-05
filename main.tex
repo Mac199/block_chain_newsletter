@@ -1,17 +1,35 @@
-\documentclass{article}
+\documentclass[conference]{IEEEtran}
 \usepackage[utf8]{inputenc}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
+
 \title{Design a block chain enabled time banking web application}
-\author{xuheng lin, ronghua xu, chen yu }
-\date{October 2018}
+
+\author{
+\IEEEauthorblockN{Xuheng Lin, Ronghua Xu, Yu Chen}
+\IEEEauthorblockA{%\textit{Dept. of Electrical \& Computer Engineering} \\
+Dept. of Electrical and Computer Engineering, Binghamton University, SUNY, Binghamton, NY 13902, USA \\
+\{rxu22, xlin84, ychen\}@binghamton.edu}
+}
+%\date{October 2018}
 
 \begin{document}
 
 \maketitle
+
+\begin{abstract}
+
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+Blockchain, Smart Contract, Time Banking.
+\end{IEEEkeywords}
+
+
 
 \section{Introduction}
 The block chain technology provides a more secure way of making transaction due to its decentralized characteristics and consensus mechanism. Every transaction becomes more transparency than ever before. And the consensus mechanism encourages people to get involved in this prosperous decentralized network. While, smart contract guarantees that the agreement is immutable and unbroken. People can rely on these to avoid being cheated. Thanks to such characteristics, many p2p web applications can be built based on block chain and smart contract, for example, time banking. 
@@ -40,10 +58,19 @@ There are five core values of time banking as listed by Edgar Cahn, the founder 
 \end{figure}
 
 \section{system design}
- First, a group of users will be created with unique public key and certain hours for development purpose. The public key is used to identify each of them in the system, and the hours is users' initial deposit which can be spent to receive service from others.  Than a smart contract defining the transaction, which is between the time and service, is made among these users.
- 
-The user service call will go into the contract and recorded in the block chain, 
+ Different from traditional web applications that relies heavily on a central server, block chain enabled time banking application uses the Ethereum platform to achieve it's goal of a decentralized application. 
 
+ First, a group of users will be created with unique public key and certain hours for development purpose. The public key is used to identify each of them in the system, and the hours is users' initial deposit which can be spent to receive service from others.  Than a smart contract defining the transaction, which is between the time and service, is made among these users. 
+ 
+ The smart contract plays an important role in the application. A smart contract is a computer protocol intended to digitally facilitate, verify, or enforce the negotiation or performance of a contract.\cite{wiki} In the contract, some rules will be defined in order to pass the transaction, like the basic line of a user's credit score. If a user doesn't have enough credit score, than this user may need to do some volunteer work to increase the credits.   
+ 
+The user can offer and request services in the time banking. These services will be uploaded to the contract and be recorded in the block chain. All the services provided by each user will be shown to the front end. When a user wants to receive the service provided by another one, this user can apply for that service. After the amplification, the information of the applier will filtered by the smart contract. The information may including credits score, social background and so on. If the information passed the contract criteria, the applier will be ready to receive the service but has to wait until the service provider finish the same filtering process. Such process ensures that the transaction is safe because users may not know each other until their first meet and the contract eliminates their worries.
+
+\section{future work}
+The block chain enabled time banking would have a huge impact in a few years later. Because people can enjoy services without spending money and community relationship really strengthened, especially for the elder and low income people, who need social care most. As more and more people involve in the time banking in the future,   
+
+
+ 
 \bibliographystyle{IEEEtranS}
 \bibliography{timebanking}
 \end{document}
